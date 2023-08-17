@@ -1,7 +1,7 @@
-package com.example.mydevhireapp.controller;
+package com.example.mydevhireapp.api.controller;
 
 import com.example.mydevhireapp.Company;
-import com.example.mydevhireapp.CompanyService;
+import com.example.mydevhireapp.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,7 @@
 package com.example.mydevhireapp;
 
-import com.example.mydevhireapp.database.repository.CompanyRepository;
+import com.example.mydevhireapp.infrastructure.database.repository.CompanyRepository;
+import com.example.mydevhireapp.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

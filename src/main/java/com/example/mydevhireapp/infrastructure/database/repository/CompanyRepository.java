@@ -1,4 +1,4 @@
-package com.example.mydevhireapp.database.repository;
+package com.example.mydevhireapp.infrastructure.database.repository;
 
 import com.example.mydevhireapp.Company;
 import org.springframework.data.jpa.repository.JpaRepository;

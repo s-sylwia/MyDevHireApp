@@ -1,4 +1,4 @@
-package com.example.mydevhireapp.database.entity;
+package com.example.mydevhireapp.infrastructure.database.entity;
 
 
 import lombok.AllArgsConstructor;

@@ -9,6 +9,7 @@ public class MyDevHireAppApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(MyDevHireAppApplication.class, args);
+
     }
 
 }
