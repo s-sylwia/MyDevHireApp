@@ -1,13 +1,11 @@
 package com.example.mydevhireapp.infrastructure.database.repository;
 
-import com.example.mydevhireapp.domain.Company;
+import com.example.mydevhireapp.domain.Candidate;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CompanyRepository extends JpaRepository<Company, Long> {
-
-
+public interface CandidateRepository extends JpaRepository<Candidate, Long> {
 
 
 }

@@ -23,5 +23,4 @@ public class UserRole {
     @Column(nullable = false)
     private String role;
 
-    // Getters, setters, constructors...
 }

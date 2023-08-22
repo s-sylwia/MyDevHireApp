@@ -1,29 +1,31 @@
 package com.example.mydevhireapp.api.controller;
 
-import com.example.mydevhireapp.Company;
-import com.example.mydevhireapp.service.CompanyService;
+import com.example.mydevhireapp.domain.Company;
+import com.example.mydevhireapp.business.dao.CompanyServiceDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/companies")
 public class CompanyController {
 
-    private final CompanyService companyService;
+    private final CompanyServiceDAO companyServiceDAO;
 
     @Autowired
-    public CompanyController(CompanyService companyService) {
-        this.companyService = companyService;
+    public CompanyController(CompanyServiceDAO companyServiceDAO) {
+        this.companyServiceDAO = companyServiceDAO;
     }
 
     @PostMapping
-    public Company createCompany(@RequestBody Company company) {
-        return companyService.createCompany(company);
+    public Company createCompany(@Valid @RequestBody Company company) {
+        return companyServiceDAO.createCompany(company);
     }
 
     @GetMapping("/{id}")
     public Company getCompanyById(@PathVariable Long id) {
-        return companyService.getCompanyById(id);
+        return companyServiceDAO.getCompanyById(id)
+                .orElseThrow(() -> new RuntimeException("Company not found with id: " + id));
     }
-
 }
