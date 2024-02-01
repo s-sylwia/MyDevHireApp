@@ -11,7 +11,7 @@ import javax.validation.Valid;
 @RequestMapping("/companies")
 public class CompanyController {
 
-    private CompanyServiceDAO companyServiceDAO;
+    private final CompanyServiceDAO companyServiceDAO;
 
     @Autowired
     public CompanyController(CompanyServiceDAO companyServiceDAO) {
